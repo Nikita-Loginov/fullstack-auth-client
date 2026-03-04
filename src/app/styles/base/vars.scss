@@ -1,0 +1,97 @@
+:root {
+  --dark-color-100: #111928;
+  --dark-color-100-rgb: 17, 25, 40;
+  --dark-color-200: #1f2a37;
+  --dark-color-300: #394151;
+  --dark-color-400: #4d5563;
+  --dark-color-500: #6c7280;
+  --dark-color-600: #9da3af;
+  --dark-color-700: #d2d5db;
+  --dark-color-800: #e5e7eb;
+
+  --gray-color-100: #f9fafb;
+  --gray-color-200: #f3f4f6;
+  --gray-color-300: #e5e7eb;
+  --gray-color-400: #dfe2e6;
+  --gray-color-500: #cfd4da;
+  --gray-color-600: #dfe4ea;
+
+  --primary-color-100: #da0b35;
+  --primary-color-200: #fee7eb;
+  --primary-color-300: #f72561;
+  --primary-color-400: #feeaf0;
+  --primary-color-500: #db2124;
+  --primary-color-600: #f20c3b;
+
+  --secondary-color-100: #636899;
+  --secondary-color-200: #ededfa;
+  --secondary-color-300: #474a6d;
+  --secondary-color-400: #2f3148;
+  --secondary-color-470: #2f3148b2;
+
+  --green-color-100: #26b539;
+  --green-color-200: #20808d1a;
+  --green-color-300: #1ab7cc52;
+  --green-color-400: #e7f4f6;
+  --green-color-500: #128c7e;
+  --green-color-600: #87d44a;
+  --green-color-700: #1e5d68;
+
+  --yellow-color-100: #fbbc0426;
+  --yellow-color-200: #d9775733;
+  --yellow-color-300: #ffae38;
+  --yellow-color-310: #ffae381a;
+  --yellow-color-400: #fa6837;
+
+  --blue-color-100: #4d6bfe33;
+  --blue-color-200: #4d6bfeb3;
+  --blue-color-300: #4498ff;
+
+  --font-main: 'Roboto', sans-serif;
+
+  --weight-font-main: 400;
+  --weight-font-md: 500;
+  --weight-font-lg: 600;
+  --weight-font-xl: 700;
+
+  --font-size-xs: 14px;
+  --font-size-s: 16px;
+  --font-size-sm: 18px;
+  --font-size-base: 20px;
+  --font-size-md: 28px;
+  --font-size-lg: 30px;
+  --font-size-xl: 40px;
+
+  --line-height-tighter: 1;
+  --line-height-tight: 1.1;
+  --line-height-base: 1.26;
+  --line-height-md: 1.33;
+  --line-height-relaxed: 1.42;
+  --line-height-loose: 1.5;
+  --line-height-looser: 1.66;
+  --line-height-loosest: 1.75;
+
+  --radius-sm: 4px;
+  --radius-base: 8px;
+  --radius-md: 12px;
+  --radius-lg: 14px;
+  --radius-xl: 16px;
+  --radius-2xl: 20px;
+  --radius-3xl: 24px;
+  --radius-4xl: 28px;
+  --radius-5xl: 32px;
+
+  --icon-xs: 10px;
+  --icon-sm: 16px;
+  --icon-base: 20px;
+  --icon-md: 24px;
+  --icon-lg: 28px;
+  --icon-xl: 36px;
+
+  --container-inline-padding: 40px;
+  --container-width: calc(1215px + calc(var(--container-inline-padding) * 2));
+
+  --calback-header-height: 116px;
+
+  --gap-blocks: 80px;
+}

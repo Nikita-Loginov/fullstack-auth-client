@@ -1,0 +1,14 @@
+:root {
+  background-color: var(--dark-color-100);
+  min-height: 100dvh;
+}
+
+body {
+  color: var(--gray-color-100);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  font-family: var(--font-main);
+  font-weight: var(--weight-font-md);
+  min-height: 100dvh;
+  transition: all 0.3s;
+}
