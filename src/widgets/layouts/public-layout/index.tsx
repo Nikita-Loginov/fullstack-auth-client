@@ -1,13 +1,15 @@
-import { Outlet } from 'react-router'
+import { Outlet } from 'react-router';
+
+import { Header } from '@widgets/ui';
 
 export const PublicLayout = () => {
   return (
-    <>
-      <header>header для публичных страниц</header>
+    <div className='wrapper'>
+      <Header />
 
-      <main>
+      <main className='main'>
         <Outlet />
       </main>
-    </>
+    </div>
   )
 }

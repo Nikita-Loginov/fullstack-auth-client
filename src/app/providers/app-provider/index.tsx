@@ -1,10 +1,14 @@
 import { RouterProvider } from 'react-router'
-import { router } from '../../routes/router'
+import { ThemeProvider } from '../theme-provider'
+
+import { router } from '@app/routes/router'
 
 export const AppProvider = () => {
   return (
     <>
-      <RouterProvider router={router}></RouterProvider>
+      <ThemeProvider>
+        <RouterProvider router={router} />
+      </ThemeProvider>
     </>
   )
 }

@@ -1,0 +1,59 @@
+body {
+  .button {
+    &.primary-type {
+      background-color: var(--green-color-100);
+    }
+  
+    &.link-type {
+      background-color: var(--dark-color-100);
+    }
+  
+    &.text-type {
+      background-color: transparent;
+    }
+  
+    &.default-type {
+      background-color: var(--gray-color-100);
+      --ant-btn-bg-color-hover: var(--dark-color-100) !important;
+
+      &:hover {
+        svg {
+          fill: var(--gray-color-100)
+        }
+      }
+  
+      svg {
+        fill: var(--dark-color-100);
+        transition: all var(--ant-motion-duration-mid);
+      }
+    }
+  
+    &.dashed-type {
+      border: 1px dashed var(--dark-color-100);
+      background-color: transparent;
+    }
+  
+    &.default-size {
+      display: flex;
+      width: auto;
+      height: auto;
+      min-height: 42px;
+    }
+  
+    &.circle-size {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+    }
+  
+    &.round-size {
+      width: 60px;
+      height: 60px;
+    }
+  
+    &.square-size {
+      width: 60px;
+      height: 60px;
+    }
+  }
+}

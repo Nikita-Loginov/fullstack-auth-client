@@ -10,5 +10,34 @@ body {
   font-family: var(--font-main);
   font-weight: var(--weight-font-md);
   min-height: 100dvh;
-  transition: all 0.3s;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex: 1;
+  padding-top: calc(var(--header-height, var(--calback-header-height)) + 20px);
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  svg,
+  img {
+    width: var(--icon-base);
+    height: var(--icon-base);
+  }
+
+  &--big {
+    svg,
+    img {
+      width: var(--icon-md);
+      height: var(--icon-md);
+    }
+  }
 }

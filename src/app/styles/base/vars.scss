@@ -1,6 +1,5 @@
 :root {
-  --dark-color-100: #111928;
-  --dark-color-100-rgb: 17, 25, 40;
+  --dark-color-100: #000000;
   --dark-color-200: #1f2a37;
   --dark-color-300: #394151;
   --dark-color-400: #4d5563;
@@ -10,6 +9,7 @@
   --dark-color-800: #e5e7eb;
 
   --gray-color-100: #f9fafb;
+  --gray-color-140: rgba(249, 250, 251, 0.4);
   --gray-color-200: #f3f4f6;
   --gray-color-300: #e5e7eb;
   --gray-color-400: #dfe2e6;
@@ -89,9 +89,16 @@
   --icon-xl: 36px;
 
   --container-inline-padding: 40px;
-  --container-width: calc(1215px + calc(var(--container-inline-padding) * 2));
+  --container-max-width: calc(
+    1215px + calc(var(--container-inline-padding) * 2)
+  );
 
-  --calback-header-height: 116px;
+  --calback-header-height: 90px;
 
   --gap-blocks: 80px;
+
+  &.light {
+    --dark-color-100: #f9fafb;
+    --gray-color-100: #000000;
+  }
 }
