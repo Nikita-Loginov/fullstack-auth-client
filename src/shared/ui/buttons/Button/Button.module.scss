@@ -1,59 +1,90 @@
-body {
-  .button {
-    &.primary-type {
-      background-color: var(--green-color-100);
-    }
-  
-    &.link-type {
-      background-color: var(--dark-color-100);
-    }
-  
-    &.text-type {
-      background-color: transparent;
-    }
-  
-    &.default-type {
-      background-color: var(--gray-color-100);
-      --ant-btn-bg-color-hover: var(--dark-color-100) !important;
+.button {
+  --small-height-btn: 30px;
+  --medium-height-btn: 40px;
+  --big-height-btn: 50px;
 
-      &:hover {
-        svg {
-          fill: var(--gray-color-100)
-        }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all .3s;
+  gap: 10px;
+  border: 1px solid transparent;
+
+  &--theme-default {
+    background-color: var(--gray-color-100);
+    color: var(--dark-color-100);
+
+    &:hover {
+      border-color: var(--dark-color-100);
+      opacity: 0.8;
+    }
+  }
+
+  &--theme-primary {
+    background-color: var(--primary-color-100);
+    color: var(--white-color-100);
+  }
+
+  &--theme-secondary {
+    border-color: var(--dark-color-100);
+    background-color: transparent;
+    color: var(--dark-color-100);
+
+    &:hover {
+      background-color: var(--dark-color-100);
+      color: var(--gray-color-100);
+    }
+  }
+
+  &--theme-success {
+    background-color: var(--green-color-100);
+    color: var(--white-color-100);
+  }
+
+  &--theme-warning {
+    background-color: var(--yellow-color-400);
+    color: var(--white-color-100);
+  }
+
+  &--small {
+    min-height: var(--small-height-btn);
+    padding: 2px 10px;
+  }
+
+  &--medium {
+    min-height: var(--medium-height-btn);
+    padding: 4px 16px;
+  }
+
+  &--big {
+    min-height: var(--big-height-btn);
+    padding: 4px 20px;
+  }
+
+  &--text {
+    border-radius: var(--radius-md);
+  }
+
+  &--icon {
+    padding: 0;
+    min-height: 0;
+    width: var(--small-height-btn);
+    aspect-ratio: 1 / 1;
+    border-radius: var(--radius-md);
+
+    &.button {
+      &--medium {
+        width: var(--medium-height-btn);
       }
-  
-      svg {
-        fill: var(--dark-color-100);
-        transition: all var(--ant-motion-duration-mid);
+
+      &--big {
+        width: var(--big-height-btn);
       }
     }
-  
-    &.dashed-type {
-      border: 1px dashed var(--dark-color-100);
-      background-color: transparent;
-    }
-  
-    &.default-size {
-      display: flex;
-      width: auto;
-      height: auto;
-      min-height: 42px;
-    }
-  
-    &.circle-size {
-      width: 42px;
-      height: 42px;
-      border-radius: 50%;
-    }
-  
-    &.round-size {
-      width: 60px;
-      height: 60px;
-    }
-  
-    &.square-size {
-      width: 60px;
-      height: 60px;
-    }
+  }
+
+  &--disabled {
+    pointer-events: none;
+    opacity: 0.7;
   }
 }

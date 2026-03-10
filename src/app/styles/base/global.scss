@@ -1,5 +1,11 @@
 :root {
   background-color: var(--dark-color-100);
+}
+
+#root,
+body,
+:root,
+.wrapper {
   min-height: 100dvh;
 }
 
@@ -9,7 +15,6 @@ body {
   line-height: var(--line-height-base);
   font-family: var(--font-main);
   font-weight: var(--weight-font-md);
-  min-height: 100dvh;
 }
 
 .wrapper {
@@ -20,6 +25,8 @@ body {
 .main {
   flex: 1;
   padding-top: calc(var(--header-height, var(--calback-header-height)) + 20px);
+  display: flex;
+  flex-direction: column;
 }
 
 .icon {
@@ -31,6 +38,10 @@ body {
   img {
     width: var(--icon-base);
     height: var(--icon-base);
+  }
+
+  svg {
+    fill: currentColor;
   }
 
   &--big {

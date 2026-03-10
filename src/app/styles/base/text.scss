@@ -1,0 +1,40 @@
+h1,
+.h1 {
+  font-size: var(--font-size-xl);
+  line-height: var(--line-height-loose);
+  font-weight: var(--weight-font-md);
+}
+
+h2,
+.h2 {
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-loose);
+  font-weight: var(--weight-font-md);
+}
+
+h3,
+.h3 {
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-loose);
+  font-weight: var(--weight-font-md);
+}
+
+.p1 {
+  font-size: var(--font-size-base);
+}
+
+.p2 {
+  font-size: var(--font-size-sm);
+}
+
+.p3 {
+  font-size: var(--font-size-s);
+}
+
+.p4 {
+  font-size: var(--font-size-xs);
+}
+
+.color-dark-400 {
+  color: var(--dark-color-400)
+}

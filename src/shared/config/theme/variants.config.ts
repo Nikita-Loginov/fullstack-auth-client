@@ -1,10 +1,14 @@
+import { MoonIcon, SunIcon } from '@widgets/ui'
+
 export const VARIANTS_THEME = {
   DARK: {
     key: 'dark' as const,
-    icon: '',
+    icon: MoonIcon,
+    oppositeIcon: SunIcon,
   },
   LIGHT: {
     key: 'light' as const,
-    icon: '',
+    icon: SunIcon,
+    oppositeIcon: MoonIcon,
   },
 }

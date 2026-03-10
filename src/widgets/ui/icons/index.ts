@@ -1,3 +1,7 @@
 export { IdCardIcon } from './IdCard'
 export { SunIcon } from './Sun'
+export { ArrowRightToBracketIcon } from './ArrowRightToBracket'
 export { MoonIcon } from './Moon'
+export { BasketShoppingIcon } from './BasketShopping'
+export { GoogleIcon } from './Google'
+export { GithubIcon } from './Github'

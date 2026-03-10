@@ -1,37 +1,87 @@
-import { Button as ButtonAntd } from 'antd'
 import classNames from 'classnames'
-
-import type { ButtonProps as AntdButtonProps } from 'antd/es/button'
+import { Link } from 'react-router'
 
 import scss from './Button.module.scss'
 
-interface ButtonProps extends AntdButtonProps {
-  iconSize?: 'base' | 'big'
+interface ButtonProps {
+  children?: React.ReactNode
+  typeBtn?: 'submit' | 'reset' | 'button'
+  iconLeft?: React.ReactNode
+  iconRight?: React.ReactNode
+  disabled?: boolean
+  variant?: 'text' | 'icon'
+  size?: 'small' | 'medium' | 'big'
+  as?: 'button' | 'link'
+  shape?: 'circle' | 'square' | 'default'
+  theme?: 'primary' | 'secondary' | 'success' | 'warning' | 'default'
+  to?: string
+  iconSize?: 'small' | 'medium' | 'big'
+  onClick?: () => void,
+  className?: string
 }
 
 export const Button = ({
-  className,
-  iconSize = 'big',
-  type = 'default',
+  typeBtn = 'button',
+  children,
+  as = 'button',
   shape = 'default',
-  icon,
-  ...rest
+  size = 'small',
+  iconSize = 'small',
+  variant = 'text',
+  theme = 'default',
+  iconLeft,
+  iconRight,
+  className,
+  onClick,
+  disabled,
+  ...restProps
 }: ButtonProps) => {
-  const classesBtn = classNames(
-    scss['button'],
-    className,
-    type ? scss[`${type}-type`] : undefined,
-    shape ? scss[`${shape}-size`] : undefined,
-  )
-
-  const classesIcon = classNames({
+  const iconClassNames = classNames({
     icon: true,
-    'icon--big': iconSize === 'big',
+    [`icon--${iconSize}`]: true,
   })
 
-  const iconNode = icon ? (
-    <span className={classesIcon}>{icon}</span>
-  ) : undefined
+  const buttonClassNames = classNames(
+    scss.button,
+    scss[`button--${size}`],
+    scss[`button--${variant}`],
+    scss[`button--theme-${theme}`],
+    // scss[`button--${shape}`],
+    {
+      [scss['button--disabled']]: disabled,
+    },
+    className
+  )
 
-  return <ButtonAntd className={classesBtn} icon={iconNode} {...rest} />
+  const content = (
+    <>
+      {iconLeft && <span className={iconClassNames}>{iconLeft}</span>}
+
+      {variant !== 'icon' && children}
+
+      {iconRight && <span className={iconClassNames}>{iconRight}</span>}
+    </>
+  )
+
+  if (as === 'link') {
+    return (
+      <Link
+        to={restProps.to || '#'}
+        {...restProps}
+        className={buttonClassNames}
+      >
+        {content}
+      </Link>
+    )
+  }
+  return (
+    <button
+      type={typeBtn}
+      onClick={onClick}
+      {...restProps}
+      className={buttonClassNames}
+    >
+      {content}
+    </button>
+  )
 }

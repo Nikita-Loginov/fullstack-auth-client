@@ -1,14 +1,16 @@
 export type Styles = {
   'button': string;
-  'circle-size': string;
-  'dashed-type': string;
-  'default-size': string;
-  'default-type': string;
-  'link-type': string;
-  'primary-type': string;
-  'round-size': string;
-  'square-size': string;
-  'text-type': string;
+  'button--big': string;
+  'button--disabled': string;
+  'button--icon': string;
+  'button--medium': string;
+  'button--small': string;
+  'button--text': string;
+  'button--theme-default': string;
+  'button--theme-primary': string;
+  'button--theme-secondary': string;
+  'button--theme-success': string;
+  'button--theme-warning': string;
 };
 
 export type ClassNames = keyof Styles;
